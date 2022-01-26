@@ -1,0 +1,53 @@
+{
+    "name": "liteas98/combinations",
+    "description": "My awesome package",
+    "keywords": [
+        "liteas98",
+        "combinations"
+    ],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mostafa Eid",
+            "email": "lost.mostafa92@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.81"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.24",
+        "phpunit/phpunit": "^9.5"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Liteas98\\Combinations\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Liteas98\\Combinations\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Liteas98\\Combinations\\CombinationsServiceProvider"
+            ],
+            "aliases": {
+                "Combinations": "Liteas98\\Combinations\\CombinationsFacade"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
